@@ -1,0 +1,70 @@
+= InfluxDB Config
+Jordan Williams <jordan@jwillikers.com>
+:experimental:
+:keywords: database influxdb time time-series
+:icons: font
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+:InfluxDB: https://www.influxdata.com/[InfluxDB]
+
+My configuration for the {InfluxDB} time-series database.
+
+== Usage
+
+This repository contains the configuration files for {InfluxDB}.
+The configuration is meant to be used with the containers from the https://github.com/jwillikers/home-lab-helm[Home Lab Helm] repository.
+
+. Create a `Projects` directory in the current user's home directory.
++
+[,sh]
+----
+mkdir -p ~/Projects
+----
+
+. Clone this repository under `~/Projects`.
++
+[,sh]
+----
+git -C ~/Projects clone git@github.com:jwillikers/influxdb-config.git
+----
+
+. Then mount the `etc/influxdb2/config.yml` directory inside the Icinga2 server container at `/etc/influxdb2/config.yml`.
+
+[TIP]
+====
+Generate the default InfluxDB configuration file with the following command.
+
+[,sh]
+----
+podman run --rm docker.io/influxdb:latest influxd print-config > config.yml
+----
+====
+
+== References
+
+* https://icinga.com/docs/icinga-2/latest/doc/04-configuration/[Icinga 2 Documentation: Configuration]
+* https://github.com/Icinga/docker-icinga2[Icinga 2 - Docker image]
+* https://github.com/Icinga/docker-icingaweb2[Icinga Web 2 - Docker image]
+* https://icinga.com/docs/icinga-db-web/latest/doc/03-Configuration/[Icinga DB Web: Configuration]
+
+== Code of Conduct
+
+Please refer to the project's link:CODE_OF_CONDUCT.adoc[Code of Conduct].
+
+== License
+
+This repository is licensed under the https://www.gnu.org/licenses/gpl-3.0.html[GPLv3].
+Please refer to the bundled link:LICENSE.adoc[license].
+
+== Copyright
+
+© 2023 Jordan Williams
+
+== Authors
+
+mailto:{email}[{author}]
