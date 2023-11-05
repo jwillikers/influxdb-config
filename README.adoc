@@ -45,13 +45,6 @@ podman run --rm docker.io/influxdb:latest influxd print-config > config.yml
 ----
 ====
 
-== References
-
-* https://icinga.com/docs/icinga-2/latest/doc/04-configuration/[Icinga 2 Documentation: Configuration]
-* https://github.com/Icinga/docker-icinga2[Icinga 2 - Docker image]
-* https://github.com/Icinga/docker-icingaweb2[Icinga Web 2 - Docker image]
-* https://icinga.com/docs/icinga-db-web/latest/doc/03-Configuration/[Icinga DB Web: Configuration]
-
 == Code of Conduct
 
 Please refer to the project's link:CODE_OF_CONDUCT.adoc[Code of Conduct].
