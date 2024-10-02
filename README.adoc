@@ -17,20 +17,20 @@ My configuration for the {InfluxDB} time-series database.
 == Usage
 
 This repository contains the configuration files for {InfluxDB}.
-The configuration is meant to be used with the containers from the https://github.com/jwillikers/home-lab-helm[Home Lab Helm] repository.
+The configuration is meant to be used with the containers from the https://codeberg.org/jwillikers/home-lab-helm[Home Lab Helm] repository.
 
 . Create a `Projects` directory in the current user's home directory.
 +
 [,sh]
 ----
-mkdir -p ~/Projects
+mkdir --parents ~/Projects
 ----
 
 . Clone this repository under `~/Projects`.
 +
 [,sh]
 ----
-git -C ~/Projects clone git@github.com:jwillikers/influxdb-config.git
+git -C ~/Projects clone git@codeberg.org:jwillikers/influxdb-config.git
 ----
 
 . Then mount the `etc/influxdb2/config.yml` directory inside the Icinga2 server container at `/etc/influxdb2/config.yml`.
@@ -56,7 +56,7 @@ Please refer to the bundled link:LICENSE.adoc[license].
 
 == Copyright
 
-© 2023 Jordan Williams
+© 2023-2024 Jordan Williams
 
 == Authors
 
